@@ -1,0 +1,12 @@
+[Unit]
+Description=Disrupt Door Telegram Bot
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/lib/disruptdoor/main.py
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+Type=notify
+User=disruptdoor
+
+[Install]
+WantedBy=default.target
